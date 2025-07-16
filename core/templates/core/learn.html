@@ -1,0 +1,1 @@
+{% extends 'core/base.html' %}{% block content %}<h3>Learn Phrases</h3>{% for phrase in phrases %}<div><p><strong>English:</strong> {{ phrase.english }}</p><p><strong>Kannada:</strong> {{ phrase.kannada }}</p>{% if phrase.audio_file %}<audio controls><source src='{{ phrase.audio_file.url }}'></audio>{% endif %}</div>{% endfor %}{% endblock %}

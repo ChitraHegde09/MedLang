@@ -1,0 +1,1 @@
+{% extends 'core/base.html' %}{% block content %}<h3>Your Progress</h3><ul>{% for activity in activities %}<li>{{ activity.phrase.english }} - {{ activity.learned_on }}</li>{% empty %}<li>No activity yet.</li>{% endfor %}</ul>{% endblock %}

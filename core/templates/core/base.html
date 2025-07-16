@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MedLang</title>
+    <link rel="stylesheet" href="{% static 'core/css/custom.css' %}">
+</head>
+<body>
+    <h2>MedLang - Symptom Based Trainer</h2>
+    <nav>
+        <a href="{% url 'home' %}">Home</a> |
+        <a href="{% url 'select_symptoms' %}">Select</a> |
+        <a href="{% url 'learn' %}">Learn</a> |
+        <a href="{% url 'dashboard' %}">Dashboard</a> |
+        {% if user.is_authenticated %}
+            <a href="{% url 'logout' %}">Logout</a>
+        {% else %}
+            <a href="{% url 'login' %}">Login</a> |
+            <a href="{% url 'register' %}">Register</a>
+        {% endif %}
+    </nav>
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+</html>

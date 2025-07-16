@@ -1,0 +1,10 @@
+{% extends 'core/base.html' %}
+{% block content %}
+<h3>Welcome to MedLang!</h3>
+<p>This app helps you learn Kannada medical phrases based on patient symptoms.</p>
+<p>
+    <a href="{% url 'register' %}"><button>Register</button></a>
+    <a href="{% url 'login' %}"><button>Login</button></a>
+    <a href="{% url 'select_symptoms' %}"><button>Select Symptoms</button></a>
+</p>
+{% endblock %}
